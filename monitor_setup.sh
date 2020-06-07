@@ -20,19 +20,39 @@
 #	ll /sys/class/drm/*/status
 # -----------------------------------------------------------------------------
 
-# wait for system to load monitor
-# sleep 3
-
 # define constants
 PROFILES="/home/filippo/.custom-components/panel_conf"
+PURPLE='\033[1;35m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+CONF_TO_LOAD=
 
-# detect how many displays are available
-N_MONITORS="$(xrandr | grep -c " connected ")"
+# if an argument is supplied, either 1 or 2, the setup is forced to the supplied
+# number of monitors. If an argument is not supplied, the script autodetects the
+# number of monitors.
+if [[ $# == 0 ]]; then
+	# detect how many displays are available
+	N_MONITORS="$(xrandr | grep -c " connected ")"
+	echo -e "Detected ${PURPLE}$N_MONITORS${NC} monitor(s)"
+	
+	# load panels configurations based on the number of monitors
+	CONF_TO_LOAD=N_MONITORS
 
-# load panels configurations based on the number of monitors
-if [[ "$N_MONITORS" == 1 ]]; then
+else
+	# check if argument supplied is either 1 or 2
+	if [[ $1 != 1 ]] && [[ $1 != 2 ]]; then
+		echo -e "${RED}Invalid number of monitors${NC}"
+		exit 1
+	fi
+	CONF_TO_LOAD=$1
+fi
+
+# eventually load the monitor setup up
+if [[ "$CONF_TO_LOAD" == 1 ]]; then
+	echo -e "Loading ${PURPLE}$PROFILES/singlemonitor.tar.bz2${NC}"
 	xfce4-panel-profiles load $PROFILES/singlemonitor.tar.bz2
 else
+	echo -e "Loading ${PURPLE}$PROFILES/dualmonitor.tar.bz2${NC}"
 	xfce4-panel-profiles load $PROFILES/dualmonitor.tar.bz2
 fi
 

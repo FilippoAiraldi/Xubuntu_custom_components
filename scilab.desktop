@@ -5,8 +5,8 @@
 Version=6.1.0
 Name=Scilab
 Comment=Open source, cross-platform numerical computational package and a high-level, numerically oriented programming language
-Exec=/home/filippo/Software/scilab-6.1.0/bin/scilab
-Icon=/home/filippo/Software/scilab-6.1.0/scilab-icon.png
+Exec=/opt/scilab-6.1.0/bin/scilab
+Icon=/opt/scilab-6.1.0/scilab-icon.png
 Terminal=false
 Type=Application
 StartupStartupNotify=true

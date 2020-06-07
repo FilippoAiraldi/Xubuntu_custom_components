@@ -160,7 +160,7 @@ is_installed(){
 alias switch_videocard='/home/filippo/.custom-components/graphics_switcher.sh'
 
 # Run script for setting up panels for a single or dual monitor
-alias setup_monitor='/home/filippo/.custom-components/monitor_setup.sh'
+alias monitor_setup='/home/filippo/.custom-components/monitor_setup.sh'
 
 ####################################################################################################################################################################
 
