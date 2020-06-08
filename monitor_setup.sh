@@ -18,7 +18,15 @@
 #	udevadm monitor -p
 #	xrandr
 #	ll /sys/class/drm/*/status
+#
+# Usage: 
+# monitor setup (null|1|2)
+#	Set ups the monitor according to the specified number of monitors.
+#	If no number is given, the script autodetects the number of displays
+#	and loads the corresponding panel profile.
 # -----------------------------------------------------------------------------
+
+
 
 # define constants
 PROFILES="/home/filippo/.custom-components/panel_conf"
@@ -26,6 +34,8 @@ PURPLE='\033[1;35m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 CONF_TO_LOAD=
+
+
 
 # if an argument is supplied, either 1 or 2, the setup is forced to the supplied
 # number of monitors. If an argument is not supplied, the script autodetects the

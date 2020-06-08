@@ -1,9 +1,15 @@
 #!/bin/bash
+
 # -------------------------------------------------------
 # A shell script that fixes screen tearing on intel video 
 # cards and switches between nvidia and intel graphic cards.
 # Written by: Bruno Assis
 # Created on: 25/03/2017
+#
+# Usage:
+# switch_videocard
+# 	No arguments are needed, the script autodetects the 
+# 	current card and asks the user if they want to switch
 # -------------------------------------------------------
 
 
@@ -114,7 +120,6 @@ function ErrorHandler {
 CheckForCurrentVideoCardInUse
 SetupEnvironment
 echo -e "Current video card in use: ${PURPLE}$CURRENT_VIDEO_CARD${NC}"
-
 
 # If the file exists then we should delete it and start nvidia
 if [ $CURRENT_VIDEO_CARD == "INTEL" ]; then
