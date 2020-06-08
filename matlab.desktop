@@ -1,0 +1,15 @@
+# if matlab is installed, this .desktop file (to be placed in /usr/share/applications/)
+# tells where the executable, icon and other stuff is.
+
+[Desktop Entry]
+Version=2020a
+Name=Matlab
+Comment=High-performance language for technical computing
+Exec=/usr/bin/matlab
+Icon=/opt/matlab/R2020a/bin/glnxa64/cef_resources/matlab_icon.png
+Terminal=true
+Type=Application
+StartupStartupNotify=true
+Categories=Education;Science;Math;
+Keywords=science;math;matrix;numerical computation;plotting;
+
