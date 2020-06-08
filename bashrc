@@ -162,5 +162,8 @@ alias switch_videocard='/home/filippo/.custom-components/graphics_switcher.sh'
 # Run script for setting up panels for a single or dual monitor
 alias monitor_setup='/home/filippo/.custom-components/monitor_setup.sh'
 
+# Print all the folders and files with dimension (can be sorted with folder_usage | sort -rh)
+alias folder_usage='du -sh --total .[^.]* *'
+
 ####################################################################################################################################################################
 
