@@ -46,7 +46,7 @@ if [[ $# == 0 ]]; then
 	echo -e "Detected ${PURPLE}$N_MONITORS${NC} monitor(s)"
 	
 	# load panels configurations based on the number of monitors
-	CONF_TO_LOAD=N_MONITORS
+	CONF_TO_LOAD=$N_MONITORS
 
 else
 	# check if argument supplied is either 1 or 2

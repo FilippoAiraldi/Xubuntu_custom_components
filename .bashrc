@@ -163,7 +163,7 @@ alias switch_videocard='/home/filippo/.custom-components/switch_videocard.sh'
 alias monitor_setup='/home/filippo/.custom-components/monitor_setup.sh'
 
 # Print all the folders and files with dimension (can be sorted with folder_usage | sort -rh)
-alias folder_usage='du -sh --total .[^.]* *'
+alias disk_usage='du -sh --total .[^.]* *'
 
 # Search for a string in a given document (if provided)
 search_in_docs() {
