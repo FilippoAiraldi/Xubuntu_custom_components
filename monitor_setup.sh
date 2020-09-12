@@ -33,7 +33,9 @@ PROFILES="/home/filippo/.custom-components/panel_conf"
 PURPLE='\033[1;35m'
 RED='\033[0;31m'
 NC='\033[0m' # No Color
-CONF_TO_LOAD=
+
+# define variables
+conf_to_load=
 
 
 
@@ -46,7 +48,7 @@ if [[ $# == 0 ]]; then
 	echo -e "Detected ${PURPLE}$N_MONITORS${NC} monitor(s)"
 	
 	# load panels configurations based on the number of monitors
-	CONF_TO_LOAD=$N_MONITORS
+	conf_to_load=$N_MONITORS
 
 else
 	# check if argument supplied is either 1 or 2
@@ -54,11 +56,11 @@ else
 		echo -e "${RED}Invalid number of monitors${NC}"
 		exit 1
 	fi
-	CONF_TO_LOAD=$1
+	conf_to_load=$1
 fi
 
 # eventually load the monitor setup up
-if [[ "$CONF_TO_LOAD" == 1 ]]; then
+if [[ "$conf_to_load" == 1 ]]; then
 	echo -e "Loading ${PURPLE}$PROFILES/singlemonitor.tar.bz2${NC}"
 	xfce4-panel-profiles load $PROFILES/singlemonitor.tar.bz2
 else

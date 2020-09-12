@@ -152,8 +152,8 @@ monitor_gpu(){
 }
 
 # Print all packages that contain the parameter string
-is_installed(){
-	apt list --installed | grep "$1"
+is_installed() { 
+	apt list --installed | grep "$1" 
 }
 
 # Run script for switching between videocars without screen tearing
@@ -165,10 +165,8 @@ alias monitor_setup='/home/filippo/.custom-components/monitor_setup.sh'
 # Print all the folders and files with dimension (can be sorted with folder_usage | sort -rh)
 alias disk_usage='du -sh --total .[^.]* *'
 
-# Search for a string in a given document (if provided)
-search_in_docs() {
-	fgrep -Hn $1 *
-}
+# Search for a string in a given document 
+alias search_in_files='/home/filippo/.custom-components/search_in_files.sh'
 
 ####################################################################################################################################################################
 
