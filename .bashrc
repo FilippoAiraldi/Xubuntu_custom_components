@@ -168,5 +168,8 @@ alias disk_usage='du -sh --total .[^.]* *'
 # Search for a string in a given document 
 alias search_in_files='/home/filippo/.custom-components/search_in_files.sh'
 
+# Connect to Ferrari remote session
+alias connect_to_Ferrari='/home/filippo/.custom-components/connect_to_Ferrari.sh'
+
 ####################################################################################################################################################################
 
