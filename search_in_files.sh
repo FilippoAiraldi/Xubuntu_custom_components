@@ -41,8 +41,8 @@ fi
 
 # actual search
 if [[ $case_insensitive == false ]]; then
-	fgrep -Hn --color=always $pattern $files
+	fgrep -Hnr --color=always $pattern $files
 else
-	fgrep -Hni --color=always $pattern $files
+	fgrep -Hnir --color=always $pattern $files
 fi
 exit 1
