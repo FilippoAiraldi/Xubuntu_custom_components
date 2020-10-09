@@ -134,41 +134,18 @@ fi
 
 
 ################################################################### CUSTOM MODIFICATION ############################################################################
-# Custom command aliases
-alias clc='clear'
 
 # Activate simple cd spelling corrections
 shopt -s cdspell
 
-# Monitor the corresponding gpu
-monitor_gpu(){
-	if [ "$1" == "intel" ]; then
-		sudo intel_gpu_top
-	elif [ "$1" == "nvidia" ]; then
-		sudo watch -n 1 nvidia-smi
-	else
-		echo "Invalid gpu (intel|nvidia)"
-	fi
-}
+alias clc='clear'
+alias disk_usage='du -sh --total .[^.]* *' # can be sorted with folder_usage | sort -rh
 
-# Print all packages that contain the parameter string
-is_installed() { 
-	apt list --installed | grep "$1" 
-}
-
-# Run script for switching between videocars without screen tearing
 alias switch_videocard='/home/filippo/.custom-components/switch_videocard.sh'
-
-# Run script for setting up panels for a single or dual monitor
 alias monitor_setup='/home/filippo/.custom-components/monitor_setup.sh'
-
-# Print all the folders and files with dimension (can be sorted with folder_usage | sort -rh)
-alias disk_usage='du -sh --total .[^.]* *'
-
-# Search for a string in a given document 
+alias is_installed='/home/filippo/.custom-components/is_installed.sh'
+alias monitor_gpu='/home/filippo/.custom-components/monitor_gpu.sh'
 alias search_in_files='/home/filippo/.custom-components/search_in_files.sh'
-
-# Connect to Ferrari remote session
 alias connect_to_Ferrari='/home/filippo/.custom-components/connect_to_Ferrari.sh'
 
 ####################################################################################################################################################################

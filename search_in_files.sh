@@ -8,7 +8,7 @@
 #
 # Usage:
 #	search_in_files (-i)
-# ------------------------------------------------------- 		fgrep -HnIi usage * 
+# ------------------------------------------------------- 	
 
 # define variables
 case_insensitive=false
