@@ -146,6 +146,7 @@ alias monitor_setup='/home/filippo/.custom-components/monitor_setup.sh'
 alias is_installed='/home/filippo/.custom-components/is_installed.sh'
 alias monitor_gpu='/home/filippo/.custom-components/monitor_gpu.sh'
 alias search_in_files='/home/filippo/.custom-components/search_in_files.sh'
+alias search_for_files='/home/filippo/.custom-components/search_for_files.sh'
 alias connect_to_Ferrari='/home/filippo/.custom-components/connect_to_Ferrari.sh'
 
 ####################################################################################################################################################################

@@ -33,22 +33,10 @@ fi
 # get pattern from input argument just after optional -i
 pattern=${!min_number_params}
 
-# if no file path after pattern is specified, check in all files in current folder
-# files="*.*"
-# if [[ $# -ne $min_number_params ]]; then
-# 	files=${@:$min_number_params+1}
-# fi
-
 # actual search
-# if [[ $case_insensitive == false ]]; then
-# 	fgrep -Hnr --color=always $pattern $files
-# else
-# 	fgrep -Hnir --color=always $pattern $files
-# fi
-
 if [[ $case_insensitive == false ]]; then
-	fgrep --color=always -HnR --include=*.* "$pattern"
+	find . -name $pattern
 else
-	fgrep --color=always -HnRi --include=*.* "$pattern"
+	find . -iname $pattern
 fi
 

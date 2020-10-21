@@ -25,5 +25,5 @@ echo -n "Password: "
 read -s password
 
 # run xfreerdp command
-xfreerdp $RDP_PATH /u:$username /p:$password
+xfreerdp $RDP_PATH +clipboard /multimon /u:$username /p:$password
 
