@@ -47,8 +47,8 @@ pattern=${!min_number_params}
 # fi
 
 if [[ $case_insensitive == false ]]; then
-	fgrep --color=always -HnR --include=*.* "$pattern"
+	grep --color=always -HnR --include=*.* "$pattern"
 else
-	fgrep --color=always -HnRi --include=*.* "$pattern"
+	grep --color=always -HnRi --include=*.* "$pattern"
 fi
 
