@@ -149,5 +149,7 @@ alias search_in_files='/home/filippo/.custom-components/search_in_files.sh'
 alias search_for_files='/home/filippo/.custom-components/search_for_files.sh'
 alias connect_to_Ferrari='/home/filippo/.custom-components/connect_to_Ferrari.sh'
 
+alias myoctave='$HOME/Documents/Coding/my_octave/bin/octave'
+
 ####################################################################################################################################################################
 
