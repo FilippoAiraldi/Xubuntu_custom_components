@@ -58,5 +58,5 @@ ask() {
 password="$(ask)"
 
 # run xfreerdp command
-xfreerdp $RDP_PATH +clipboard +toggle-fullscreen /multimon /smart-sizing /u:$username /p:$password
+xfreerdp $RDP_PATH +clipboard +toggle-fullscreen /rfx /multimon /smart-sizing /u:$username /p:$password
 
