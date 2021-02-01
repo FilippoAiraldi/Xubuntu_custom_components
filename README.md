@@ -1,3 +1,4 @@
-# Xubuntu Custom Components
-Various custom scripts and configurations for Xubuntu.
+ 
+# Bash Utils
 
+A collection of scripts that might be useful for bash stuff.
